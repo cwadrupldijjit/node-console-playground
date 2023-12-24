@@ -1,0 +1,22 @@
+{
+  "name": "node-console-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "execute": "node --loader ts-node/esm -r ts-node/register",
+    "snowflakes": "pnpm execute snowflakes/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.11.13",
+    "ansi-colors": "^4.1.3",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4"
+  }
+}
