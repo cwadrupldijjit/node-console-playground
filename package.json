@@ -8,15 +8,19 @@
     "execute": "cross-env NODE_NO_WARNINGS=1 node --loader ts-node/esm -r ts-node/register",
     "snowflakes": "pnpm execute snowflakes/index.ts",
     "flappy-bit": "pnpm execute flappy-bit/index.ts",
+    "snake-mmo": "pnpm execute snake-mmo/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fluvial/cors": "^0.4.6",
+    "@fluvial/csp": "^0.4.6",
     "@types/node": "^18.11.13",
     "ansi-colors": "^4.1.3",
     "cross-env": "^7.0.3",
+    "fluvial": "^0.4.6",
     "ts-node": "^10.9.1",
     "tslib": "^2.4.1",
     "typescript": "^4.9.4"

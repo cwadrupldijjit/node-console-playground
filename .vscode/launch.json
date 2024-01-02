@@ -7,7 +7,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Snowflakes",
             "runtimeArgs": [
                 "--loader",
                 "ts-node/esm",
@@ -22,6 +22,45 @@
                 "${workspaceFolder}/**/*.js"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Flappy Bit",
+            "runtimeArgs": [
+                "--loader",
+                "ts-node/esm",
+                "-r",
+                "ts-node/register"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/flappy-bit/index.ts",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Snake MMO",
+            "runtimeArgs": [
+                "--loader",
+                "ts-node/esm",
+                "-r",
+                "ts-node/register"
+            ],
+            "program": "${workspaceFolder}/snake-mmo/index.ts",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js",
+                "!**/node_modules/**"
+            ],
+            "console": "externalTerminal"
         }
     ]
 }

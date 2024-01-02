@@ -1,4 +1,7 @@
 import readline, { Key } from 'readline';
+import colors from 'ansi-colors';
+
+const { greenBright, redBright, blueBright } = colors;
 
 const obstacles: Obstacle[] = [];
 let [ width, height ] = process.stdout.getWindowSize();
@@ -151,8 +154,10 @@ async function render() {
         await renderPipe(obstacle);
     }
     
+    const bitText = collisionDetected ? redBright('✕') : blueBright(bit.character);
+    
     await setCursorPosition(bit.position.x, bit.position.y);
-    process.stdout.write(bit.character);
+    process.stdout.write(bitText);
     
     await setCursorPosition(width, height);
 }
@@ -184,7 +189,7 @@ async function renderPipe(obstacle: Obstacle) {
     for (let y = 0; y < height; y++) {
         if (y < gapStart || y > gapEnd) {
             await setCursorPosition(obstacle.x, y);
-            process.stdout.write('|');
+            process.stdout.write(greenBright('|'));
         }
     }
 }
