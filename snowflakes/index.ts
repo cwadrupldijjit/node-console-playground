@@ -12,7 +12,7 @@ import colors from 'ansi-colors';
 
 const possibleColors = [ 'blue', 'white', 'gray', 'cyan' ] as const;
 const possibleSymbols = [ '*', '.', '+', 'x', '#', '`' ] as const;
-const weight = 3;
+const weight = 10;
 // in ms
 const refreshRate = 50;
 
